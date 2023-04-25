@@ -1,6 +1,16 @@
 from django.contrib import admin
-from .models import Doctype, Document, Teacher, News, Gallery
+from .models import Doctype, Document, Teacher, News, Gallery, Category
 from django_summernote.admin import SummernoteModelAdmin
+
+
+class DoctypeTab(admin.TabularInline):
+    model = Doctype
+    extra = 1
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', )
+    inlines = [DoctypeTab, ]
 
 
 class DoctypeAdmin(admin.ModelAdmin):
@@ -27,6 +37,7 @@ class GalleryAdmin(SummernoteModelAdmin):
     summernote_fields = ('description', )
 
 
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(Doctype, DoctypeAdmin)
 admin.site.register(Document, DocumentAdmin)
 admin.site.register(Teacher, TeacherAdmin)

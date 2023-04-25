@@ -1,9 +1,21 @@
 from django.db import models
 
 
+class Category(models.Model):
+    name = models.CharField(verbose_name='Название', max_length=255)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+
+
 # Doctype
 class Doctype(models.Model):
     doctype_name = models.CharField(verbose_name='Тип документа', max_length=255)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
 
     def __str__(self):
         return self.doctype_name
@@ -46,7 +58,9 @@ class Teacher(models.Model):
 # News
 class News(models.Model):
     title = models.CharField(verbose_name='Название темы', max_length=255)
+    poster = models.ImageField(verbose_name='Постер', upload_to='main/news/poster/', blank=True, null=True)
     description = models.TextField(verbose_name='Описание', blank=True, null=True)
+    date_created = models.DateTimeField(verbose_name='Дата создание', auto_now_add=True)
 
     def __str__(self):
         return self.title
