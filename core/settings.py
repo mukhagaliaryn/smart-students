@@ -21,8 +21,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main.apps.MainConfig',
+    'django_summernote',
+    'django_cleanup.apps.CleanupConfig',
 
+    'main.apps.MainConfig'
 ]
 
 
