@@ -44,6 +44,7 @@ class Document(models.Model):
 # Teachers
 class Teacher(models.Model):
     full_name = models.CharField(verbose_name='Полная имя', max_length=255)
+    branch = models.CharField(verbose_name='Направление', max_length=255, default='')
     image = models.ImageField(verbose_name='Изображение', upload_to='main/authors/')
     about = models.TextField(verbose_name='О педагоге', blank=True, null=True)
 
@@ -68,6 +69,7 @@ class News(models.Model):
     class Meta:
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
+        ordering = ('-date_created', )
 
 
 # Gallery
@@ -75,6 +77,7 @@ class Gallery(models.Model):
     title = models.CharField(verbose_name='Название файла', max_length=255)
     file = models.FileField(verbose_name='Исходный файл', upload_to='main/gallery/', blank=False, null=False)
     description = models.TextField(verbose_name='Описание', blank=True, null=True)
+    active = models.BooleanField(verbose_name='Активный', default=False)
 
     def __str__(self):
         return self.title

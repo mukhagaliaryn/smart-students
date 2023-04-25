@@ -8,7 +8,7 @@
         <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow mb-4">
             <h1 class="ml-2 font-bold text-xl md:text-2xl text-gray-800">Соңғы жаңалықтар</h1>
 
-            <a href="#"
+            <a href="{% url 'news' %}"
                 class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
                 Толығырақ
                 <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -55,20 +55,18 @@
     <!-- About -->
     <!-- =============================================================================== -->
     <div id="about" class="my-6">
-        <div class="grid gap-10 grid-cols-1 lg:grid-cols-2 bg-white rounded-lg">
-            <img src="https://blog.advancementcourses.com/wp-content/uploads/2020/10/Smart-School.jpg" class="rounded-lg"
-                alt="about">
+        <div class="grid gap-10 grid-cols-1 lg:grid-cols-2 bg-white rounded-lg overflow-hidden shadow border-gray-200">
+            <img src="https://blog.advancementcourses.com/wp-content/uploads/2020/10/Smart-School.jpg" alt="about">
 
             <div class="p-4">
                 <h2 class="mb-3 text-3xl font-bold tracking-tight text-gray-800 dark:text-white">Біз жайлы
                 </h2>
                 <p class="text-gray-500 dark:text-gray-400">
-                    Б. з. б. II ғасырдың екінші жартысындағы «Халықтардың ұлы қоныс аударуы» деп
-                    аталып кеткен тарихи оқиғалардың нәтижесінде Орталық Азияда жаңа мемлекеттік
-                    бірлестіктер, соның ішінде Үйсін, Янцай, Қаңлы мемлекеттері қалыптасады.
-                    Соңғысы Қазақстан тарихында елеулі рөл атқарды.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, doloribus sint architecto, 
+                    repudiandae ullam iure similique libero magnam dignissimos porro velit aliquam vel voluptatum ad 
+                    odio error sequi soluta maxime consequatur amet consequuntur voluptas harum sed! Veritatis, earum animi.
                 </p>
-                <a href="#"
+                <a href="{% url 'about' %}"
                     class="mt-4 inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
                     Толығырақ
                     <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +86,7 @@
         <div class="flex justify-between items-center mb-6">
             <h1 class="ml-2 font-bold text-2xl text-gray-800">Мұғалімдер ұжымы</h1>
 
-            <a href="#"
+            <a href="{% url 'teachers' %}"
                 class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
                 Толығырақ
                 <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -104,10 +102,10 @@
                 <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <div class="flex flex-col items-center pt-10 pb-10">
                         <img class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                            src="https://flowbite.com/docs/images/people/profile-picture-4.jpg" alt="Bonnie image" />
+                            src="{{ teacher.image.url }}" alt="Bonnie image" />
                         <h5 class="mb-1 text-base font-bold text-gray-900 dark:text-white">{{ teacher.full_name }}
                         </h5>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Педагог</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">{{ teacher.branch }}</span>
                         <div class="flex mt-4 space-x-3 md:mt-6">
                             <a href="#"
                                 class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Толығырақ</a>
