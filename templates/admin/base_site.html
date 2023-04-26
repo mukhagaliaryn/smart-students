@@ -1,0 +1,28 @@
+{% extends 'admin/base_site.html' %}
+
+{% block extrahead %}
+    <style>
+        #container #header {
+            align-items: center;
+        }
+
+        .login #container #header {
+            justify-content: center;
+        }
+
+        #container #header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        #container #header #branding #site-name img {
+            max-width: 120px;
+            /* width: 100px; */
+            margin: 0 10px;
+        }
+        .login #container #header #branding {
+            text-align: center;
+        }
+    </style>
+{% endblock %}
