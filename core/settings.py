@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_summernote',
     'django_cleanup.apps.CleanupConfig',
+    'active_link',
 
     'main.apps.MainConfig'
 ]

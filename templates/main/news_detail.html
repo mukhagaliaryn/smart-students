@@ -1,13 +1,25 @@
 {% extends 'base.html' %}
 
-{% block title %}Жаңалық{% endblock title %}
+{% block title %}{{ post.title }}{% endblock title %}
 
 {% block content %}
     <!-- News -->
-    <div id="documents" class="mt-4">
+    <div id="documents" class="">
         <div class="flex justify-between items-center mb-4 bg-white p-4 rounded-lg shadow">
-            <h1 class="ml-2 font-bold text-2xl text-gray-800">Жаңалық</h1>
+            <h1 class="ml-2 font-bold text-2xl text-gray-800">{{ post.title }}</h1>
         </div>
 
+        <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg" src="{% if post.poster.url %}{{ post.poster.url }}{% else %}https://flowbite.com/docs/images/blog/image-1.jpg{% endif %}" alt="" />
+            </a>
+            <div class="p-5">
+                <h5 class="pb-4 text-xl border-b font-bold tracking-tight text-gray-900 dark:text-white">
+                    {{ post.title }}
+                </h5>
+                <div class="py-4 border-b">{{ post.description | safe }}</div>
+                <p class="pt-4 mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">{{ post.date_created }}</p>
+            </div>
+        </div>
     </div>
 {% endblock content %}
