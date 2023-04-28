@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}{{ doctype.doctype_name }}{% endblock title %}
 
@@ -29,7 +30,7 @@
                                             {{ doctype.doctype_name }}
                                         </p>
                                     </div>
-                                    <a href="{{ doc.source.url }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Жүктеу</a>
+                                    <a href="{{ doc.source.url }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{% translate "Жүктеу" %}</a>
                                 </div>
                             </li>
                         {% endfor %}

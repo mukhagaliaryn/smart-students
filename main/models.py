@@ -45,7 +45,7 @@ class Document(models.Model):
 class Teacher(models.Model):
     full_name = models.CharField(verbose_name='Полная имя', max_length=255)
     branch = models.CharField(verbose_name='Направление', max_length=255, default='')
-    image = models.ImageField(verbose_name='Изображение', upload_to='main/authors/')
+    image = models.ImageField(verbose_name='Изображение', upload_to='main/authors/', blank=True, null=True)
     about = models.TextField(verbose_name='О педагоге', blank=True, null=True)
 
     def __str__(self):

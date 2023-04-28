@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}Категориялар{% endblock title %}
 
@@ -6,7 +7,7 @@
     <div id="categories">
         <div id="categories">
             <div class="flex justify-between items-center mb-4 bg-white p-4 rounded-lg shadow">
-                <h1 class="ml-2 font-bold text-2xl text-gray-800">Барлық категориялар</h1>
+                <h1 class="ml-2 font-bold text-2xl text-gray-800">{% translate "Барлық категориялар" %}</h1>
             </div>
 
             <div

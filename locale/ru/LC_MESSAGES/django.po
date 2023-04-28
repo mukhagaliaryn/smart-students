@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-28 12:02+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: core/settings.py:106
+msgid "Russian"
+msgstr "Русский"
+
+#: core/settings.py:107
+msgid "Kazakh"
+msgstr "Қазақша"
+
+#: templates/base.html:11
+#, fuzzy
+#| msgid "SMART орта мектебі"
+msgid "SMART - орта мектебі"
+msgstr "SMART - средняя школа"
+
+#: templates/base.html:47
+msgid "Шымкент қаласының білім басқармасының"
+msgstr "Управления образования города Шымкент"
+
+#: templates/base.html:48
+msgid "SMART орта мектебі"
+msgstr "Средняя школа - SMART"
+
+#: templates/base.html:49
+msgid "SMARTSTUDENTS орта мектебі"
+msgstr "Средняя школа SMARTSTUDENTS"
+
+#: templates/base.html:61
+msgid "Жұмыс уақыты:"
+msgstr "Время работы: "
+
+#: templates/base.html:63
+msgid "Дс - Жм"
+msgstr "Пн - Пт"
+
+#: templates/base.html:95
+msgid "жалпы білім беретін мектебі"
+msgstr "образовательная школа"
+
+#: templates/base.html:175 templates/main/index.html:4
+msgid "Басты бет"
+msgstr "Главная"
+
+#: templates/base.html:180
+msgid "Мектеп құжаттары"
+msgstr "Школьные документы"
+
+#: templates/base.html:208
+msgid "Жаңалықтар"
+msgstr "Новости"
+
+#: templates/base.html:212
+msgid "Мұғалімдер"
+msgstr "Учителя"
+
+#: templates/base.html:216 templates/base.html:302
+msgid "Категориялар"
+msgstr "Категории"
+
+#: templates/base.html:220 templates/main/docs.html:9
+msgid "Барлық құжаттар"
+msgstr "Все документы"
+
+#: templates/base.html:224 templates/main/about.html:10
+#: templates/main/index.html:64
+msgid "Біз жайлы"
+msgstr "О нас"
+
+#: templates/base.html:306 templates/base.html:352 templates/main/index.html:14
+#: templates/main/index.html:73 templates/main/index.html:93
+#: templates/main/index.html:114 templates/main/teachers.html:14
+#: templates/main/teachers.html:35
+msgid "Толығырақ"
+msgstr "Подробнее"
+
+#: templates/base.html:336
+msgid "Кіру"
+msgstr "Войти"
+
+#: templates/base.html:348
+msgid "Құжаттар"
+msgstr "Документы"
+
+#: templates/base.html:382 templates/main/category.html:32
+#: templates/main/docs.html:32
+msgid "Жүктеу"
+msgstr "Скачать"
+
+#: templates/base.html:400
+msgid "SMART және SMART STUDENTS"
+msgstr "SMART и SMART STUDENTS"
+
+#: templates/base.html:401
+msgid "Барлық құқықтар қорғалған."
+msgstr "Все права защищены."
+
+#: templates/main/categories.html:9
+#, fuzzy
+#| msgid "Категориялар"
+msgid "Барлық категориялар"
+msgstr "Категории"
+
+#: templates/main/doc_detail.html:9
+#, fuzzy
+#| msgid "Құжаттар"
+msgid "Құжат"
+msgstr "Документы"
+
+#: templates/main/index.html:10
+#, fuzzy
+#| msgid "Жаңалықтар"
+msgid "Соңғы жаңалықтар"
+msgstr "Новости"
+
+#: templates/main/index.html:40
+msgid "Оқып шығу"
+msgstr "Читать полный"
+
+#: templates/main/index.html:89 templates/main/teachers.html:10
+#, fuzzy
+#| msgid "Мұғалімдер"
+msgid "Мұғалімдер ұжымы"
+msgstr "Учителя"
+
+#~ msgid "SMART STUDENTS - орта мектебі"
+#~ msgstr "SMART STUDENTS - средняя школа"

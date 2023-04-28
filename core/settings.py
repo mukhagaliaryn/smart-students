@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from decouple import config
+from django.utils.translation import gettext_lazy as _
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -35,6 +36,7 @@ SILENCED_SYSTEM_CHECKS = ['security.W019']
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -95,11 +97,19 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = 'ru'
 TIME_ZONE = 'Asia/Almaty'
 USE_I18N = True
 USE_TZ = True
 
+LANGUAGES = [
+    ('ru', _('Russian')),
+    ('kk', _('Kazakh')),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale'
+]
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
