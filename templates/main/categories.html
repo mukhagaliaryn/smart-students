@@ -30,7 +30,7 @@
                                             {{ doctype.category }}
                                         </p>
                                     </div>
-                                    <a href="{% url 'category' doctype.id %}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Перейти</a>
+                                    <a href="{% url 'category' doctype.id %}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{% translate "Перейти" %}</a>
                                 </div>
                             </li>
                         {% endfor %}
