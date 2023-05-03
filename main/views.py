@@ -60,11 +60,11 @@ def news_detail(request, pk):
 
 
 def teachers(request):
-    teachers = Teacher.objects.all()
+    teachers_list = Teacher.objects.all()
 
     # context
     context = {
-        'teachers': teachers,
+        'teachers': teachers_list,
 
         'doctype_list': Doctype.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],

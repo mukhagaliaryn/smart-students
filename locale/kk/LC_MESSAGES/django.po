@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-28 12:02+0600\n"
+"POT-Creation-Date: 2023-05-03 09:15+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,124 +17,114 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+#: core/settings.py:105
+msgid "Russian"
+msgstr ""
 
 #: core/settings.py:106
-msgid "Russian"
-msgstr "Русский"
-
-#: core/settings.py:107
 msgid "Kazakh"
 msgstr "Қазақша"
 
-#: templates/base.html:11
-msgid "SMART - орта мектебі"
-msgstr "SMART - орта мектебі"
+#: templates/base.html:11 templates/base.html:48
+msgid "Средняя общеобразовательная школа SMART"
+msgstr "SMART жалпы орта білім беретін мектебі"
 
 #: templates/base.html:47
-msgid "Шымкент қаласының білім басқармасының"
-msgstr "Шымкент қаласының білім басқармасының"
-
-#: templates/base.html:48
-msgid "SMART орта мектебі"
-msgstr "SMART орта мектебі"
+msgid "Управления образования города Шымкент"
+msgstr "Шымкент қаласының білім басқармасы"
 
 #: templates/base.html:49
-msgid "SMARTSTUDENTS орта мектебі"
-msgstr "SMARTSTUDENTS орта мектебі"
+msgid "Средняя общеобразовательная школа SMART STUDENTS"
+msgstr "SMART STUDENTS білім беретін мектебі"
 
 #: templates/base.html:61
-msgid "Жұмыс уақыты:"
+msgid "Время работы:"
 msgstr "Жұмыс уақыты:"
 
 #: templates/base.html:63
-msgid "Дс - Жм"
+msgid "Пн - Пт"
 msgstr "Дс - Жм"
 
 #: templates/base.html:95
-msgid "жалпы білім беретін мектебі"
-msgstr "білім беретін мектебі"
+msgid "средняя общеобразовательная школа"
+msgstr "жалпы орта білім беретін мектеп"
 
 #: templates/base.html:175 templates/main/index.html:4
-msgid "Басты бет"
+msgid "Главная"
 msgstr "Басты бет"
 
 #: templates/base.html:180
-msgid "Мектеп құжаттары"
+msgid "Школьные документы"
 msgstr "Мектеп құжаттары"
 
 #: templates/base.html:208
-msgid "Жаңалықтар"
+msgid "Новости"
 msgstr "Жаңалықтар"
 
 #: templates/base.html:212
-msgid "Мұғалімдер"
+msgid "Учители"
 msgstr "Мұғалімдер"
 
 #: templates/base.html:216 templates/base.html:302
-msgid "Категориялар"
+msgid "Категории"
 msgstr "Категориялар"
 
-#: templates/base.html:220 templates/main/docs.html:9
-msgid "Барлық құжаттар"
+#: templates/base.html:220 templates/main/docs.html:10
+msgid "Все документы"
 msgstr "Барлық құжаттар"
 
-#: templates/base.html:224 templates/main/about.html:10
+#: templates/base.html:224 templates/main/about.html:11
 #: templates/main/index.html:64
-msgid "Біз жайлы"
+msgid "О нас"
 msgstr "Біз жайлы"
 
 #: templates/base.html:306 templates/base.html:352 templates/main/index.html:14
 #: templates/main/index.html:73 templates/main/index.html:93
-#: templates/main/index.html:114 templates/main/teachers.html:14
-#: templates/main/teachers.html:35
-msgid "Толығырақ"
+#: templates/main/index.html:114 templates/main/teachers.html:26
+msgid "Подробнее"
 msgstr "Толығырақ"
 
 #: templates/base.html:336
-msgid "Кіру"
+msgid "Перейти"
 msgstr "Кіру"
 
 #: templates/base.html:348
-msgid "Құжаттар"
+msgid "Документы"
 msgstr "Құжаттар"
 
-#: templates/base.html:382 templates/main/category.html:32
-#: templates/main/docs.html:32
-msgid "Жүктеу"
+#: templates/base.html:382 templates/main/category.html:33
+#: templates/main/docs.html:33
+msgid "Скачать"
 msgstr "Жүктеу"
 
 #: templates/base.html:400
-msgid "SMART және SMART STUDENTS"
+msgid "SMART и SMART STUDENTS"
 msgstr "SMART және SMART STUDENTS"
 
 #: templates/base.html:401
-msgid "Барлық құқықтар қорғалған."
+msgid "Все права защищены."
 msgstr "Барлық құқықтар қорғалған."
 
-#: templates/main/categories.html:9
-#, fuzzy
-#| msgid "Категориялар"
-msgid "Барлық категориялар"
-msgstr "Категориялар"
+#: templates/main/categories.html:10
+msgid "Все категории"
+msgstr "Барлық категориялар"
 
-#: templates/main/doc_detail.html:9
-#, fuzzy
-#| msgid "Құжаттар"
+#: templates/main/doc_detail.html:10
 msgid "Құжат"
-msgstr "Құжаттар"
+msgstr ""
 
 #: templates/main/index.html:10
-#, fuzzy
-#| msgid "Жаңалықтар"
-msgid "Соңғы жаңалықтар"
-msgstr "Жаңалықтар"
+msgid "Последние новости"
+msgstr "Соңғы жаңалықтар"
 
 #: templates/main/index.html:40
-msgid "Оқып шығу"
-msgstr "Оқып шығу"
+msgid "Читать полностью"
+msgstr "Толығырақ оқу"
 
-#: templates/main/index.html:89 templates/main/teachers.html:10
-#, fuzzy
-#| msgid "Мұғалімдер"
-msgid "Мұғалімдер ұжымы"
-msgstr "Мұғалімдер"
+#: templates/main/index.html:89 templates/main/teachers.html:11
+msgid "Коллектив учителей"
+msgstr "Мұғалімдер ұжымы"
+
+#: templates/main/news.html:9
+msgid "Все новости"
+msgstr "Барлық жаңалықтар"

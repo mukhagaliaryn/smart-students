@@ -1,23 +1,18 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 from .models import Doctype, Document, Teacher, News, Gallery, Category
 from django_summernote.admin import SummernoteModelAdmin
 
 
-class DoctypeTab(admin.TabularInline):
-    model = Doctype
-    extra = 1
-
-
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(TranslationAdmin):
     list_display = ('name', )
-    inlines = [DoctypeTab, ]
 
 
-class DoctypeAdmin(admin.ModelAdmin):
+class DoctypeAdmin(TranslationAdmin):
     list_display = ('doctype_name', )
 
 
-class DocumentAdmin(SummernoteModelAdmin):
+class DocumentAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_display = ('title', 'doctype', 'date_created', )
     summernote_fields = ('description', )
 

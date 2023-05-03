@@ -1,14 +1,14 @@
 {% load static %}
 {% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'images/logo.jpg' %}" type="image/x-icon">
-    <title>{% block title %}{% translate "SMART - орта мектебі" %}{% endblock %}</title>
+    <title>{% block title %}{% translate "Средняя общеобразовательная школа SMART" %}{% endblock %}</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,9 +44,9 @@
                         class="h-16 mr-6" alt="Logo" />
                     
                     <div class="flex flex-col">
-                        <h1 class="font-bold">{% translate "Шымкент қаласының білім басқармасының" %}</h1>
-                        <span class="text-sm text-gray-500 dark:text-white">{% translate "SMART орта мектебі" %}</span>
-                        <span class="text-sm text-gray-500 dark:text-white">{% translate "SMARTSTUDENTS орта мектебі" %}</span>
+                        <h1 class="font-bold">{% translate "Управления образования города Шымкент" %}</h1>
+                        <span class="text-sm text-gray-500 dark:text-white">{% translate "Средняя общеобразовательная школа SMART" %}</span>
+                        <span class="text-sm text-gray-500 dark:text-white">{% translate "Средняя общеобразовательная школа SMART STUDENTS" %}</span>
                     </div>
                 </a>
                 
@@ -58,9 +58,9 @@
                 <!-- Contacts -->
                 <div class="flex flex-wrap">
                     <div class="flex  flex-col mr-4">
-                        <h1 class="font-bold">{% translate "Жұмыс уақыты:" %}</h1>
+                        <h1 class="font-bold">{% translate "Время работы:" %}</h1>
                         <a class="mr-6 text-sm  text-gray-500 dark:text-white hover:underline">
-                            {% translate "Дс - Жм" %}
+                            {% translate "Пн - Пт" %}
                         </a>
                         <a class="mr-6 text-sm  text-gray-500 dark:text-white hover:underline">
                             08:00 - 18:30
@@ -92,7 +92,7 @@
                     <img src="{% static 'images/logo.jpg' %}" class="h-16 mr-3 rounded-lg" alt="Logo" />
                     <div class="flex flex-col items-start">
                         <span class="text-3xl font-bold font-poppins dark:text-white">SMART</span>
-                        <span class="text-sm dark:text-white ml-1 text-gray-500 dark:text-white">{% translate "жалпы білім беретін мектебі" %}</span>
+                        <span class="text-sm dark:text-white ml-1 text-gray-500 dark:text-white">{% translate "средняя общеобразовательная школа" %}</span>
                     </div>
 
                 </a>
@@ -172,12 +172,12 @@
                         <li class="mb-2">
                             <a href="{% url 'main' %}"
                                 class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
-                                aria-current="page">{% translate "Басты бет" %}</a>
+                                aria-current="page">{% translate "Главная" %}</a>
                         </li>
                         <li class="mb-2">
                             <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
                                 class="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                                {% translate "Мектеп құжаттары" %}
+                                {% translate "Школьные документы" %}
                                 <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -205,23 +205,23 @@
                         <!-- Static links -->
                         <li class="mb-2">
                             <a href="{% url 'news' %}"
-                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "Жаңалықтар" %}</a>
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "Новости" %}</a>
                         </li>
                         <li class="mb-2">
                             <a href="{% url 'teachers' %}"
-                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "Мұғалімдер" %}</a>
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "Учители" %}</a>
                         </li>
                         <li class="mb-2">
                             <a href="{% url 'categories' %}"
-                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "Категориялар" %}</a>
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "Категории" %}</a>
                         </li>
                         <li class="mb-2">
                             <a href="{% url 'docs' %}"
-                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "Барлық құжаттар" %}</a>
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "Все документы" %}</a>
                         </li>
                         <li class="mb-2">
                             <a href="{% url 'about' %}"
-                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "Біз жайлы" %}</a>
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{% translate "О нас" %}</a>
                         </li>
                     </ul>
                 </div>
@@ -299,11 +299,11 @@
                     <!-- last_doctypes -->
                     <div id="last-categories">
                         <div class="flex justify-between items-center mb-4 bg-white p-4 rounded-lg shadow">
-                            <h1 class="ml-2 font-bold text-2xl text-gray-800">{% translate "Категориялар" %}</h1>
+                            <h1 class="ml-2 font-bold text-2xl text-gray-800">{% translate "Категории" %}</h1>
 
                             <a href="{% url 'categories' %}"
                                 class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
-                                {% translate "Толығырақ" %}
+                                {% translate "Подробнее" %}
                                 <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -330,10 +330,10 @@
                                                         {{ doctype.doctype_name }}
                                                     </p>
                                                     <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                                        {{ doctype.category }}
+                                                        {{ doctype.category.name }}
                                                     </p>
                                                 </div>
-                                                <a href="{% url 'category' doctype.id %}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{% translate "Кіру" %}</a>
+                                                <a href="{% url 'category' doctype.id %}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{% translate "Перейти" %}</a>
                                             </div>
                                         </li>
                                     {% endfor %}
@@ -345,11 +345,11 @@
                     <!-- last documents -->
                     <div id="last-categories" class="mt-4">
                         <div class="flex justify-between items-center mb-4 bg-white p-4 rounded-lg shadow">
-                            <h1 class="ml-2 font-bold text-2xl text-gray-800">{% translate "Құжаттар" %}</h1>
+                            <h1 class="ml-2 font-bold text-2xl text-gray-800">{% translate "Документы" %}</h1>
 
                             <a href="{% url 'docs' %}"
                                 class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
-                                {% translate "Толығырақ" %}
+                                {% translate "Подробнее" %}
                                 <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -379,7 +379,7 @@
                                                         {{ doc.doctype }}
                                                     </p>
                                                 </div>
-                                                <a href="{{ doc.source.url }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{% translate "Жүктеу" %}</a>
+                                                <a href="{{ doc.source.url }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{% translate "Скачать" %}</a>
                                             </div>
                                         </li>
                                     {% endfor %}
@@ -397,8 +397,8 @@
     <footer class="bg-white sm:p-6 dark:bg-gray-900 border-t">
         <div class="p-4 sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#"
-                    class="hover:underline">{% translate "SMART және SMART STUDENTS" %}</a>. 
-                    {% translate "Барлық құқықтар қорғалған." %}
+                    class="hover:underline">{% translate "SMART и SMART STUDENTS" %}</a>. 
+                    {% translate "Все права защищены." %}
             </span>
 
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
@@ -430,6 +430,7 @@
     </footer>
 
 
+    <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 </body>
 

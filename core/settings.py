@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 from decouple import config
-from django.utils.translation import gettext_lazy as _
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -11,11 +10,11 @@ DEBUG = config('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 INSTALLED_APPS = [
     'admin_interface',
     'colorfield',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -28,10 +27,8 @@ INSTALLED_APPS = [
     'main.apps.MainConfig'
 ]
 
-
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SILENCED_SYSTEM_CHECKS = ['security.W019']
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,7 +61,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-
 # Database
 DATABASES = {
     'default': {
@@ -95,17 +91,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 LANGUAGE_CODE = 'ru'
 TIME_ZONE = 'Asia/Almaty'
 USE_I18N = True
 USE_TZ = True
 
-LANGUAGES = [
-    ('ru', _('Russian')),
-    ('kk', _('Kazakh')),
-]
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
+
+gettext = lambda s: s
+
+LANGUAGES = (
+    ('ru', gettext('Russian')),
+    ('kk', gettext('Kazakh')),
+)
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale'
@@ -118,7 +117,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'templates/static')]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
