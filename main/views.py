@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Doctype, Document, Teacher, News, Gallery
+from .models import Doctype, Document, Teacher, News, Gallery, Category
 
 
 def main(request):
@@ -9,7 +9,7 @@ def main(request):
     context = {
         'news': news,
 
-        'doctype_list': Doctype.objects.all(),
+        'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
         'last_document_list': Document.objects.all()[:5],
         'last_teachers': Teacher.objects.all()[:4],
@@ -22,7 +22,7 @@ def about(request):
 
     # context
     context = {
-        'doctype_list': Doctype.objects.all(),
+        'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
         'last_document_list': Document.objects.all()[:5],
         'last_gallery': Gallery.objects.all()[:4]
@@ -37,7 +37,7 @@ def news(request):
     context = {
         'news': news,
 
-        'doctype_list': Doctype.objects.all(),
+        'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
         'last_document_list': Document.objects.all()[:5],
         'last_gallery': Gallery.objects.all()[:4]
@@ -51,7 +51,7 @@ def news_detail(request, pk):
     context = {
         'post': post,
 
-        'doctype_list': Doctype.objects.all(),
+        'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
         'last_document_list': Document.objects.all()[:5],
         'last_gallery': Gallery.objects.all()[:4]
@@ -66,7 +66,7 @@ def teachers(request):
     context = {
         'teachers': teachers_list,
 
-        'doctype_list': Doctype.objects.all(),
+        'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
         'last_document_list': Document.objects.all()[:5],
         'last_gallery': Gallery.objects.all()[:4]
@@ -78,7 +78,7 @@ def categories(request):
 
     # context
     context = {
-        'doctype_list': Doctype.objects.all(),
+        'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
         'last_document_list': Document.objects.all()[:5],
         'last_gallery': Gallery.objects.all()[:4]
@@ -95,7 +95,7 @@ def category(request, pk):
         'doctype': doctype,
         'documents': documents,
 
-        'doctype_list': Doctype.objects.all(),
+        'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
         'last_document_list': Document.objects.all()[:5],
         'last_gallery': Gallery.objects.all()[:4]
@@ -107,7 +107,7 @@ def docs(request):
 
     # context
     context = {
-        'doctype_list': Doctype.objects.all(),
+        'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
         'last_document_list': Document.objects.all()[:5],
         'last_gallery': Gallery.objects.all()[:4]
