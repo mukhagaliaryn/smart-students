@@ -41,6 +41,18 @@ class Document(models.Model):
         verbose_name_plural = 'Документы'
 
 
+class DocFile(models.Model):
+    docs = models.ForeignKey(Document, on_delete=models.CASCADE)
+    title = models.CharField(verbose_name='Название', max_length=255)
+    file = models.FileField(verbose_name='Исходный файл', upload_to='main/docs/', blank=False, null=False)
+
+    def __str__(self):
+        return self.docs.title
+
+    class Meta:
+        verbose_name = 'Файл'
+        verbose_name_plural = 'Файлы'
+
 # Teachers
 class Teacher(models.Model):
     full_name = models.CharField(verbose_name='Полная имя', max_length=255)

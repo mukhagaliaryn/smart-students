@@ -113,3 +113,17 @@ def docs(request):
         'last_gallery': Gallery.objects.all()[:4]
     }
     return render(request, 'main/docs.html', context)
+
+
+def docs_detail(request, pk):
+    doc = get_object_or_404(Document, pk=pk)
+
+    # context
+    context = {
+        'doc': doc,
+        'categories': Category.objects.all(),
+        'last_doctype_list': Doctype.objects.all()[:5],
+        'last_document_list': Document.objects.all()[:5],
+        'last_gallery': Gallery.objects.all()[:4]
+    }
+    return render(request, 'main/doc_detail.html', context)

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
-from .models import Doctype, Document, Teacher, News, Gallery, Category
+from .models import Doctype, Document, Teacher, News, Gallery, Category, DocFile
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -12,9 +12,15 @@ class DoctypeAdmin(TranslationAdmin):
     list_display = ('doctype_name', )
 
 
+class DocsFileTab(admin.TabularInline):
+    model = DocFile
+    extra = 1
+
+
 class DocumentAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_display = ('title', 'doctype', 'date_created', )
     summernote_fields = ('description', )
+    inlines = [DocsFileTab, ]
 
 
 class TeacherAdmin(SummernoteModelAdmin):
