@@ -14,7 +14,7 @@
             {% for post in news %}
                 <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <a href="{% url 'news_detail' post.id %}">
-                        <img class="rounded-t-lg" src="{% if post.poster.url %}{{ post.poster.url }}{% else %}https://flowbite.com/docs/images/blog/image-1.jpg{% endif %}" alt="" />
+                        <img class="rounded-t-lg" src="{% if post.poster not None %}{{ post.poster.url }}{% else %}{% static '/images/poster.png' %}{% endif %}" alt="" />
                     </a>
                     <div class="p-5">
                         <a href="#">

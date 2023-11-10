@@ -29,7 +29,6 @@ class Doctype(models.Model):
 class Document(models.Model):
     title = models.CharField(verbose_name='Тип документа', max_length=255)
     doctype = models.ForeignKey(Doctype, on_delete=models.CASCADE, verbose_name='Тип документа')
-    source = models.FileField(verbose_name='Исходный файл', upload_to='main/docs/', blank=False, null=False)
     description = models.TextField(verbose_name='Описание', blank=True, null=True)
     date_created = models.DateTimeField(verbose_name='Дата создание', auto_now_add=True)
 

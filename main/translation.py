@@ -11,7 +11,7 @@ class DoctypeTranslationOptions(TranslationOptions):
 
 
 class DocumentTranslationOptions(TranslationOptions):
-    fields = ('title', 'source', )
+    fields = ('title', )
 
 
 translator.register(Category, CategoryTranslationOptions)
