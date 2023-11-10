@@ -45,6 +45,7 @@ class DocFile(models.Model):
     docs = models.ForeignKey(Document, on_delete=models.CASCADE)
     title = models.CharField(verbose_name='Название', max_length=255)
     file = models.FileField(verbose_name='Исходный файл', upload_to='main/docs/', blank=False, null=False)
+    date_created = models.DateField(verbose_name='Дата создание', blank=True, null=True)
 
     def __str__(self):
         return self.docs.title
@@ -52,6 +53,7 @@ class DocFile(models.Model):
     class Meta:
         verbose_name = 'Файл'
         verbose_name_plural = 'Файлы'
+
 
 # Teachers
 class Teacher(models.Model):
