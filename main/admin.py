@@ -9,7 +9,8 @@ class CategoryAdmin(TranslationAdmin):
 
 
 class DoctypeAdmin(TranslationAdmin):
-    list_display = ('doctype_name', )
+    list_display = ('doctype_name', 'category', )
+    list_filter = ('category', )
 
 
 class DocsFileTab(admin.TabularInline):
@@ -19,6 +20,7 @@ class DocsFileTab(admin.TabularInline):
 
 class DocumentAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_display = ('title', 'doctype', 'date_created', )
+    list_filter = ('doctype', )
     summernote_fields = ('description', )
     inlines = [DocsFileTab, ]
 

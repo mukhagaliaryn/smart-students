@@ -38,6 +38,7 @@ class Document(models.Model):
     class Meta:
         verbose_name = 'Документ'
         verbose_name_plural = 'Документы'
+        ordering = ('-date_created', )
 
 
 class DocFile(models.Model):
@@ -52,6 +53,7 @@ class DocFile(models.Model):
     class Meta:
         verbose_name = 'Файл'
         verbose_name_plural = 'Файлы'
+        ordering = ('-date_created',)
 
 
 # Teachers
@@ -98,6 +100,3 @@ class Gallery(models.Model):
     class Meta:
         verbose_name = 'Галерея'
         verbose_name_plural = 'Галереи'
-
-
-
