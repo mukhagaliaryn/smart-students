@@ -20,7 +20,7 @@ class DocsFileTab(admin.TabularInline):
 
 
 class DocumentAdmin(SummernoteModelAdmin, TranslationAdmin):
-    list_display = ('title', 'doctype', 'date_created', )
+    list_display = ('title', 'doctype', 'is_public', 'date_created', )
     list_filter = ('doctype', )
     search_fields = ('title', 'doctype', )
     summernote_fields = ('description', )

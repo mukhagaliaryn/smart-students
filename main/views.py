@@ -11,7 +11,7 @@ def main(request):
 
         'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
-        'last_document_list': Document.objects.all()[:5],
+        'last_document_list': Document.objects.filter(is_public='PUBLIC')[:5],
         'last_teachers': Teacher.objects.all()[:4],
         'last_gallery': Gallery.objects.all()[:4]
     }
@@ -24,7 +24,7 @@ def about(request):
     context = {
         'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
-        'last_document_list': Document.objects.all()[:5],
+        'last_document_list': Document.objects.filter(is_public='PUBLIC')[:5],
         'last_gallery': Gallery.objects.all()[:4]
     }
     return render(request, 'main/about.html', context)
@@ -39,7 +39,7 @@ def news(request):
 
         'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
-        'last_document_list': Document.objects.all()[:5],
+        'last_document_list': Document.objects.filter(is_public='PUBLIC')[:5],
         'last_gallery': Gallery.objects.all()[:4]
     }
     return render(request, 'main/news.html', context)
@@ -53,7 +53,7 @@ def news_detail(request, pk):
 
         'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
-        'last_document_list': Document.objects.all()[:5],
+        'last_document_list': Document.objects.filter(is_public='PUBLIC')[:5],
         'last_gallery': Gallery.objects.all()[:4]
     }
     return render(request, 'main/news_detail.html', context)
@@ -68,7 +68,7 @@ def teachers(request):
 
         'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
-        'last_document_list': Document.objects.all()[:5],
+        'last_document_list': Document.objects.filter(is_public='PUBLIC')[:5],
         'last_gallery': Gallery.objects.all()[:4]
     }
     return render(request, 'main/teachers.html', context)
@@ -80,7 +80,7 @@ def categories(request):
     context = {
         'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
-        'last_document_list': Document.objects.all()[:5],
+        'last_document_list': Document.objects.filter(is_public='PUBLIC')[:5],
         'last_gallery': Gallery.objects.all()[:4]
     }
     return render(request, 'main/categories.html', context)
@@ -88,7 +88,7 @@ def categories(request):
 
 def category(request, pk):
     doctype = get_object_or_404(Doctype, pk=pk)
-    documents = doctype.document_set.all()
+    documents = doctype.document_set.filter(is_public='PUBLIC')
 
     # context
     context = {
@@ -97,7 +97,7 @@ def category(request, pk):
 
         'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
-        'last_document_list': Document.objects.all()[:5],
+        'last_document_list': Document.objects.filter(is_public='PUBLIC')[:5],
         'last_gallery': Gallery.objects.all()[:4]
     }
     return render(request, 'main/category.html', context)
@@ -116,14 +116,14 @@ def docs(request):
 
 
 def docs_detail(request, pk):
-    doc = get_object_or_404(Document, pk=pk)
+    doc = get_object_or_404(Document, pk=pk, is_public='PUBLIC')
 
     # context
     context = {
         'doc': doc,
         'categories': Category.objects.all(),
         'last_doctype_list': Doctype.objects.all()[:5],
-        'last_document_list': Document.objects.all()[:5],
+        'last_document_list': Document.objects.filter(is_public='PUBLIC')[:5],
         'last_gallery': Gallery.objects.all()[:4]
     }
     return render(request, 'main/doc_detail.html', context)

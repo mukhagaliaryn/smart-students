@@ -27,8 +27,14 @@ class Doctype(models.Model):
 
 # Document
 class Document(models.Model):
+    IS_PUBLIC = (
+        ('PUBLIC', 'Доступный'),
+        ('PRIVATE', 'Не доступный'),
+    )
     title = models.CharField(verbose_name='Тип документа', max_length=255)
     doctype = models.ForeignKey(Doctype, on_delete=models.CASCADE, verbose_name='Тип документа')
+    is_public = models.CharField(verbose_name='Тип доступа', max_length=255,
+                                 choices=IS_PUBLIC, default=IS_PUBLIC[0][1])
     description = models.TextField(verbose_name='Описание', blank=True, null=True)
     date_created = models.DateTimeField(verbose_name='Дата создание', auto_now_add=True)
 
